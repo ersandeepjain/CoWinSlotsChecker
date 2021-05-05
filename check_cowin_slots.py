@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         #d2 = d1 + datetime.timedelta(i)
         d2 = d1
         try:
-            pincodes = ['431517']
+            pincodes = ['411014']
             for pincode in pincodes:
                 got_slot = get_slots(d2.strftime("%d-%m-%Y"), pincode)
                 if got_slot:
@@ -38,7 +38,7 @@ def lambda_handler(event, context):
             print("Error occurred for fetching for %s: %s" % (d2.strftime("%d-%m-%Y"), str(e)) )
     raise Exception("No slots")
                 
-            # pincode = '413512'
+            # pincode = '411014'
             # got_slot = get_slots(d2.strftime("%d-%m-%Y"), pincode)
             # if got_slot:
             #     return {
